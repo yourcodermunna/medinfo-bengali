@@ -16,19 +16,13 @@
     <meta property="og:image" content="https://medinfobengali.com/logo.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Medinfo Bengali",
-        "url": "https://medinfobengali.com/",
-        "description": "বাংলা ভাষায় স্বাস্থ্য ও ঔষধ সম্পর্কিত গুরুত্বপূর্ণ তথ্য।",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://medinfobengali.com/?q={search_term_string}",
-            "query-input": "required name=search_term_string"
+    <script>
+        function openChatbot() {
+            document.getElementById('chatbotPopup').style.display = 'block';
         }
-    }
+        function closeChatbot() {
+            document.getElementById('chatbotPopup').style.display = 'none';
+        }
     </script>
 </head>
 <body>
@@ -55,13 +49,38 @@
             <h2>আমাদের ইউটিউব ভিডিও দেখুন</h2>
             <iframe src="https://www.youtube.com/embed/wlfhZtP9AGg" allowfullscreen loading="lazy" title="Medinfo Bengali YouTube Video"></iframe>
         </div>
-
-        <a href="https://www.youtube.com/@MedinfoBengali" target="_blank" class="youtube-btn">
-            📺 আমাদের YouTube চ্যানেল দেখুন
-        </a>
     </div>
 
-    <div class="chatbot" onclick="openChatbot()">💬</div>
+    <a href="https://www.youtube.com/@MedinfoBengali" target="_blank" class="youtube-btn">
+        📺 আমাদের YouTube চ্যানেল দেখুন
+    </a>
+
+    <div class="chatbot-popup" id="chatbotPopup">
+        <div class="chatbot-header">
+            <h3>চ্যাটবট</h3>
+            <button onclick="closeChatbot()">❌</button>
+        </div>
+        <div class="chatbot-body">
+            <p>আপনার প্রশ্ন করুন!</p>
+            <input type="text" placeholder="আপনার প্রশ্ন লিখুন...">
+            <button>জিজ্ঞাসা করুন</button>
+        </div>
+    </div>
+
+    <section id="news">
+        <h2>স্বাস্থ্য সংবাদ</h2>
+        <p>সাম্প্রতিক স্বাস্থ্য সংক্রান্ত খবর ও আপডেট।</p>
+    </section>
+
+    <section id="lifestyle">
+        <h2>লাইফস্টাইল</h2>
+        <p>স্বাস্থ্যকর জীবনযাপনের জন্য টিপস এবং পরামর্শ।</p>
+    </section>
+
+    <section id="disease">
+        <h2>রোগ সম্পর্কিত তথ্য</h2>
+        <p>বিভিন্ন রোগের লক্ষণ, কারণ এবং প্রতিকার সম্পর্কে জানুন।</p>
+    </section>
 
     <section id="medicine">
         <h2>ঔষধ সম্পর্কিত তথ্য</h2>
@@ -74,7 +93,7 @@
         </ul>
     </section>
 
-    <section id="home-remedies">
+    <section id="remedies">
         <h2>ঘরোয়া প্রতিকার</h2>
         <p>প্রাকৃতিক উপায়ে রোগ প্রতিরোধ ও নিরাময়ের জন্য কার্যকরী টিপস।</p>
         <ul>
@@ -83,6 +102,11 @@
             <li><strong>লেবু পানি</strong> - শরীর ডিটক্স করতে সহায়তা করে।</li>
             <li><strong>গোল মরিচ</strong> - হজম ক্ষমতা উন্নত করে।</li>
         </ul>
+    </section>
+
+    <section id="jobs">
+        <h2>জব আপডেট</h2>
+        <p>স্বাস্থ্য খাতে চাকরির সর্বশেষ আপডেট।</p>
     </section>
 
     <section id="about-us">
@@ -98,6 +122,11 @@
     <footer>
         <p>&copy; 2025 Medinfo Bengali. All rights reserved.</p>
         <a href="https://www.youtube.com/@MedinfoBengali" target="_blank">📺 আমাদের YouTube চ্যানেল</a>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">📘</a>
+            <a href="https://twitter.com" target="_blank">🐦</a>
+            <a href="https://instagram.com" target="_blank">📸</a>
+        </div>
     </footer>
 </body>
 </html>
